@@ -1,40 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Career Bot | Find Your Next Job</title>
-    <meta name="description" content="Explore job vacancies, apply online, and learn more about our company.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Career Bot — Find Your Next Opportunity</title>
+  <meta name="description" content="Explore jobs, apply online, and learn about our company. Career Bot helps you find your next opportunity." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header>
-    <h1>Career Bot 🤖</h1>
-    <p>Your assistant for job opportunities</p>
-</header>
+  <!-- HERO -->
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">
+        <i class="fa-solid fa-robot"></i>
+        CareerBot
+      </div>
+    </nav>
 
-<main>
-    <section id="bot">
-        <div id="bot-message">
-            👋 Hello! How can I help you today?
-        </div>
+    <div class="hero-content">
+      <h1>Build Your Career.<br><span>We’ll Guide You.</span></h1>
+      <p>
+        Discover opportunities, apply in minutes, and learn about projects
+        shaping cities worldwide.
+      </p>
 
-        <div class="actions">
-            <button onclick="showVacancies()">Available Vacancies</button>
-            <button onclick="showApplicationForm()">Submit an Application</button>
-            <button onclick="showAbout()">About Us</button>
-        </div>
+      <div class="hero-actions">
+        <button onclick="showVacancies()">
+          <i class="fa-solid fa-briefcase"></i>
+          View Vacancies
+        </button>
+        <button class="secondary" onclick="showApplicationForm()">
+          <i class="fa-solid fa-paper-plane"></i>
+          Apply Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- QUICK ACTION CARDS -->
+    <section class="quick-actions">
+      <div class="action-card" onclick="showVacancies()">
+        <i class="fa-solid fa-list"></i>
+        <h3>Available Vacancies</h3>
+        <p>Browse open positions across multiple locations.</p>
+      </div>
+
+      <div class="action-card" onclick="showApplicationForm()">
+        <i class="fa-solid fa-user-check"></i>
+        <h3>Submit Application</h3>
+        <p>Apply securely with your experience and documents.</p>
+      </div>
+
+      <div class="action-card" onclick="showAbout()">
+        <i class="fa-solid fa-building"></i>
+        <h3>About Us</h3>
+        <p>Learn who we are and what we’re building.</p>
+      </div>
     </section>
 
+    <!-- DYNAMIC CONTENT -->
     <section id="content"></section>
-</main>
+  </main>
 
-<footer>
-    <p>© 2025 Career Bot. All rights reserved.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 CareerBot. Designed for the future of work.</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-  </html>
+    </html>
