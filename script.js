@@ -1,98 +1,93 @@
 const content = document.getElementById("content");
+let lang = "en";
 
-/* ---------------- VACANCIES ---------------- */
+/* TRANSLATIONS */
+const t = {
+  en: {
+    title: "Your Career. Powered by AI.",
+    subtitle: "Explore vacancies, apply instantly and talk to our AI assistant.",
+    jobs: "Jobs",
+    apply: "Apply",
+    about: "About"
+  },
+  ru: {
+    title: "Ваша карьера. Усиленная ИИ.",
+    subtitle: "Вакансии, быстрая подача заявки и AI-ассистент.",
+    jobs: "Вакансии",
+    apply: "Заявка",
+    about: "О нас"
+  }
+};
 
-const vacancies = [
-    {
-        title: "Frontend Developer",
-        location: "Berlin, Germany",
-        description: "Build modern user interfaces using HTML, CSS, and JavaScript."
-    },
-    {
-        title: "Project Manager",
-        location: "Dubai, UAE",
-        description: "Manage construction and IT projects from planning to delivery."
-    },
-    {
-        title: "Civil Engineer",
-        location: "Toronto, Canada",
-        description: "Work on large-scale infrastructure and building projects."
-    }
-];
+function applyLang() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    el.textContent = t[lang][el.dataset.i18n];
+  });
+}
 
+function toggleLanguage() {
+  lang = lang === "en" ? "ru" : "en";
+  applyLang();
+}
+
+/* THEME */
+function toggleTheme() {
+  document.body.classList.toggle("light");
+}
+
+/* VACANCIES */
 function showVacancies() {
-    content.innerHTML = "<h2>Available Vacancies</h2>";
-
-    vacancies.forEach(job => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-            <h3>${job.title}</h3>
-            <p><strong>Location:</strong> ${job.location}</p>
-            <p>${job.description}</p>
-        `;
-        content.appendChild(card);
-    });
+  content.innerHTML = `
+    <div class="card">
+      <h3>Frontend Developer</h3>
+      <p>Berlin · Remote</p>
+    </div>
+    <div class="card">
+      <h3>AI Product Manager</h3>
+      <p>Dubai · Hybrid</p>
+    </div>
+  `;
 }
 
-/* ---------------- APPLICATION FORM ---------------- */
-
+/* APPLICATION */
 function showApplicationForm() {
-    content.innerHTML = `
-        <h2>Submit Your Application</h2>
-        <div class="card">
-            <form onsubmit="submitApplication(event)">
-                <label>First Name</label>
-                <input type="text" required>
-
-                <label>Last Name</label>
-                <input type="text" required>
-
-                <label>Passport Number</label>
-                <input type="text" required>
-
-                <label>Age</label>
-                <input type="number" required>
-
-                <label>Education</label>
-                <textarea required></textarea>
-
-                <label>Work Experience</label>
-                <textarea required></textarea>
-
-                <button type="submit">Send Application</button>
-            </form>
-        </div>
-    `;
+  content.innerHTML = `
+    <div class="card">
+      <input placeholder="Name">
+      <input placeholder="Surname">
+      <input placeholder="Passport">
+      <textarea placeholder="Experience"></textarea>
+      <button onclick="alert('Sent ✅')">Send</button>
+    </div>
+  `;
 }
 
-function submitApplication(event) {
-    event.preventDefault();
-    alert("✅ Your application has been submitted successfully!");
-}
-
-/* ---------------- ABOUT US ---------------- */
-
+/* ABOUT */
 function showAbout() {
-    content.innerHTML = `
-        <h2>About Us</h2>
-        <div class="card">
-            <p>
-                We are an international company operating for over <strong>15 years</strong>
-                in construction, technology, and infrastructure development.
-            </p>
-            <p>
-                Our projects have been completed in:
-                <strong>Berlin, Dubai, London, Toronto, and Singapore</strong>.
-            </p>
-            <p>
-                Ongoing projects are currently in:
-                <strong>New York, Riyadh, and Sydney</strong>.
-            </p>
-            <p>
-                Our mission is to build sustainable, innovative solutions and provide
-                career opportunities worldwide.
-            </p>
-        </div>
-    `;
+  content.innerHTML = `
+    <div class="card">
+      <p>15+ years · Global projects · Future focused</p>
+    </div>
+  `;
 }
+
+/* AI ASSISTANT */
+function showAI() {
+  content.innerHTML = `
+    <div class="card">
+      <p><strong>AI:</strong> Hi! I can help you choose a job.</p>
+      <input placeholder="Ask me anything…" 
+        onkeydown="if(event.key==='Enter') aiReply(this)">
+    </div>
+  `;
+}
+
+function aiReply(input) {
+  content.innerHTML += `
+    <div class="card">
+      <p><strong>AI:</strong> Based on your skills, Frontend roles fit you best 🚀</p>
+    </div>
+  `;
+}
+
+applyLang();
