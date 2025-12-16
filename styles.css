@@ -1,76 +1,77 @@
+:root {
+  --primary: #6c63ff;
+  --secondary: #00d4ff;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    padding: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
 }
 
-header {
-    background: #1e88e5;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 24px;
 }
 
-main {
-    padding: 20px;
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#bot {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: auto;
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-#bot-message {
-    font-size: 18px;
-    margin-bottom: 15px;
+.hero-content {
+  max-width: 900px;
+  margin: 80px auto 100px;
+  text-align: center;
 }
 
-.actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
-button {
-    background: #1e88e5;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 5px;
-    cursor: pointer;
+.hero-content h1 span {
+  color: #e0e7ff;
 }
 
-button:hover {
-    background: #1565c0;
+.hero-content p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.95;
 }
 
-#content {
-    margin-top: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.hero-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 6px;
-    margin-bottom: 12px;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #e0e0e0;
-  }
+.hero-actions button {
+  padding: 14px
