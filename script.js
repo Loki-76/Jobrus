@@ -66,7 +66,7 @@ function showApplicationForm() {
 function showAbout() {
   content.innerHTML = `
     <div class="card">
-      <p>15+ years · Global projects · Future focused</p>
+      <p>The construction company specializes in the construction of modular buildings from scratch. The work is on a shift basis. The company has been on the market for over 10 years. It conducts its activities of constructing modular blocks throughout Russia.</p>
     </div>
   `;
 }
