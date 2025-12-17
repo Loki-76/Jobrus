@@ -39,12 +39,21 @@ function toggleTheme() {
 function showVacancies() {
   content.innerHTML = `
     <div class="card">
-      <h3>Frontend Developer</h3>
-      <p>Berlin · Remote</p>
+      <h3>Welder</h3>
+      <p>Russia · Salary from 150,000 ₽
+Shift work 1/1 month. Experience of at least 5 years. Accommodation, daily allowance, work uniform and tools provided by the employer.</p>
     </div>
     <div class="card">
-      <h3>AI Product Manager</h3>
-      <p>Dubai · Hybrid</p>
+      <h3>Installation of drywall</h3>
+      <p>Russia · Salary from 100,000 ₽ 
+Shift work 1/1 month. Experience of at least 3 years. 
+Accommodation, daily allowance, work uniform and tools provided by the employer.</p>
+    </div>
+<div class="card">
+      <h3>Installation of the heating system of modular buildings</h3>
+      <p>Russia · Salary from 150,000 ₽ 
+Shift work 1/1 month. Experience of at least 5 years. 
+Accommodation, daily allowance, work uniform and tools provided by the company.</p>
     </div>
   `;
 }
@@ -53,11 +62,21 @@ function showVacancies() {
 function showApplicationForm() {
   content.innerHTML = `
     <div class="card">
-      <input placeholder="Name">
-      <input placeholder="Surname">
-      <input placeholder="Passport">
-      <textarea placeholder="Experience"></textarea>
-      <button onclick="alert('Sent ✅')">Send</button>
+      <h3>Welder</h3>
+      <p>Russia · Salary from 150,000 ₽
+Shift work 1/1 month. Experience of at least 5 years. Accommodation, daily allowance, work uniform and tools provided by the employer.</p>
+    </div>
+    <div class="card">
+      <h3>Installation of drywall</h3>
+      <p>Russia · Salary from 100,000 ₽ 
+Shift work 1/1 month. Experience of at least 3 years. 
+Accommodation, daily allowance, work uniform and tools provided by the employer.</p>
+    </div>
+<div class="card">
+      <h3>Installation of the heating system of modular buildings</h3>
+      <p>Russia · Salary from 150,000 ₽ 
+Shift work 1/1 month. Experience of at least 5 years. 
+Accommodation, daily allowance, work uniform and tools provided by the company.</p>
     </div>
   `;
 }
